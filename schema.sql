@@ -42,3 +42,16 @@ CREATE TABLE systemUser (
   user_birthdate DATE NOT NULL,
   PRIMARY KEY (user_id)
 );
+
+DROP DATABASE IF EXISTS testDB;
+
+CREATE DATABASE testDB;
+
+USE testDB;
+
+CREATE TABLE users (
+  id INTEGER (4) AUTO_INCREMENT,
+  email VARCHAR (40) NOT NULL,
+  password VARCHAR (100) NOT NULL,
+  PRIMARY KEY (id)
+);
