@@ -1,2 +1,2 @@
-# SportGearResource
-Sport Gear Rental
+# Sherpa Mountain Rentals
+Sherpa Mountain Rentals
