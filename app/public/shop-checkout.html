@@ -2,17 +2,15 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Sherpa-Login</title>
+    <title>Sherpa Checkout</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-
     <!-- Favicone Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="img/sarrow.png">
     <link rel="icon" type="image/png" href="img/sarrow.png">
-    <link rel="apple-touch-icon" href="img/sarrow.pngg">
-
+    <link rel="apple-touch-icon" href="img/sarrow.png">
     <!-- CSS -->
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
@@ -21,7 +19,9 @@
     <link href="css/plugin/sidebar-menu.css" rel="stylesheet" type="text/css" />
     <link href="css/plugin/animate.css" rel="stylesheet" type="text/css" />
     <link href="css/jquery-ui.css" rel="stylesheet" type="text/css" />
+
 </head>
+
 <body>
     <!-- Preloader -->
     <section id="preloader">
@@ -50,9 +50,7 @@
             <a>New Customer?</a>
         </div>
         <ul>
-            <li><a class="all-demos-link" target="_blank" href="../demo.html">Main Demo Page</a></li>
-            <li><a href="home.html">Home Default</a></li>
-            <li><a href="portfolio-grid-2col.html">Portfolio</a></li>
+            <li><a href="home.html">Home</a></li>
             <li><a href="login-register.html">Login & Signup</a></li>
             <li><a href="faq-1.html">FAQ</a></li>
             <li><a href="about.html">About</a></li>
@@ -62,19 +60,16 @@
         </ul>
     </section>
     <!--End Sidemenu -->
-
     <!-- Site Wraper -->
     <div class="wrapper">
-
         <!-- Header -->
-        <header id="header" class="header header-light">
+        <header id="header" class="header">
             <div class="container header-inner">
-
                 <!-- Logo -->
                 <div class="logo">
                     <a href="index.html">
-                        <img class="logo-light" src="img/sarrow.png" alt="" />
-                        <img class="logo-dark" src="img/lsarrow.png" alt="" />
+                        <img class="logo-light" src="img/sarrow.png" alt="arrow" />
+                        <img class="logo-dark" src="img/sarrow.png" alt="arrow" />
                     </a>
                 </div>
                 <!-- End Logo -->
@@ -147,34 +142,26 @@
 
                 <!-- Navbar Navigation -->
                 <div class="nav-menu">
-                    <ul class="nav-menu-inner" >
+                    <ul class="nav-menu-inner">
                         <li>
-                            <a class="menu-has-sub" href="home.html" >Home <i class="fa fa-angle-down"></i></a>
+                            <a class="menu-has-sub" href="home.html">Home <i class="fa fa-angle-down"></i></a>
                             <!-- Dropdown -->
                             <ul class="sub-dropdown dropdown">
                                 <li>
                                     <a class="menu-has-sub" href='#'>Multi Page <i class="fa fa-angle-right"></i></a>
                                     <ul class="sub-dropdown">
-                                        <li><a href="home.html">Default</a></li>
-                                        <li><a href="shop-2col.html">Shop</a></li>
-                                        <li><a href="home-coming-soon.html">Comming Soon</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a class="menu-has-sub" href="#">One Page <i class="fa fa-angle-right"></i></a>
-                                    <ul class="sub-dropdown">
-                                        <li><a href="onepage.html">Default</a></li>
-                                        <li><a href="onepage-personal.html">Personal</a></li>
-                                        <li><a href="onepage-video.html">Video</a></li>
-                                        <li><a href="onepage-youtube.html">Youtube</a></li>
-                                        <li><a href="onepage-static.html">Static</a></li>
+                                        <li><a href="home.html">Home</a></li>
+                                        <li><a href="home.html">Test</a></li>
+                                        <li><a href="home.html">Test2</a></li>
+                                        <li><a href="home.html">Test3</a></li>
+
                                     </ul>
                                 </li>
                             </ul>
                             <!-- End Dropdown -->
                         </li>
-                        <!-- Pages -->
                         <li>
+                        <!-- Pages Links -->
                             <a class="menu-has-sub">Pages <i class="fa fa-angle-down"></i></a>
                             <!-- Dropdown -->
                             <ul class="sub-dropdown dropdown">
@@ -185,9 +172,11 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a class="menu-has-sub">Service <i class="fa fa-angle-right"></i></a>
+                                    <a class="menu-has-sub">Services <i class="fa fa-angle-right"></i></a>
                                     <ul class="sub-dropdown">
                                         <li><a href="service-1.html">Service 1</a></li>
+<!--                                         <li><a href="service-2.html">Service 2</a></li>
+                                        <li><a href="service-3.html">Service 3</a></li> -->
                                     </ul>
                                 </li>
                                 <li>
@@ -208,120 +197,165 @@
                                 <li>
                                     <a class="menu-has-sub">Login / Register<i class="fa fa-angle-right"></i></a>
                                     <ul class="sub-dropdown">
+                                        <li><a href="login.html">Login</a></li>
+                                        <li><a href="register.html">Register</a></li>
                                         <li><a href="login-register.html">Login / Register</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="pricing.html">Pricing</a></li>
+                                <li><a href="blank-page.html">Blank Page</a></li>
                             </ul>
                             <!-- End Dropdown -->
                         </li>
-                    <!-- Shop -->
                         <li>
                             <a class="menu-has-sub">Shop <i class="fa fa-angle-down"></i></a>
                             <!-- Dropdown -->
                             <ul class="sub-dropdown dropdown">
-                                <li><a href="shop-4col.html">Products</a></li>
-                                <li><a href="shop-left-sidebar.html">Left Sidebar</a></li>
+                                <li><a href="shop-2col.html">Summer Gear Rentals</a></li>
+                                <li><a href="shop-3col.html">Winter Gear Rentals</a></li>
                                 <li><a href="shop-right-sidebar.html">Right Sidebar</a></li>
                                 <li><a href="shop-detail.html">Shop Detail</a></li>
                                 <li><a href="shop-checkout.html">Checkout</a></li>
                             </ul>
                             <!-- End Dropdown -->
-                      </li>
+                        </li>
                     </ul>
                 </div>
                 <!-- End Navbar Navigation -->
+
             </div>
         </header>
         <!-- End Header -->
 
         <!-- CONTENT --------------------------------------------------------------------------------->
         <!-- Intro Section -->
-        <section class="inner-intro" style="background-image: url(
-    'https://media.giphy.com/media/neYLwaRpjnq48/giphy.gif'); background-size: 100%;background-repeat: no-repeat;" >
-    <!-- best https://media.giphy.com/media/tcse40F3smFuE/giphy.gif -->
-    <!-- waterfall gif https://media.giphy.com/media/neYLwaRpjnq48/giphy.gif -->
-    <!-- https://media.giphy.com/media/3orifdXudI0DTYmhIA/giphy.gif -->
-    <!-- https://media.giphy.com/media/wqVdSVThku6Pu/giphy.gif -->
-    <!-- https://media.giphy.com/media/xT5LMHQ7RloiuJUuA0/giphy.gif -->
+        <section class="inner-intro" style="background-image: url(http://s3.amazonaws.com/ogden_images/www.hiddenvalleyresort.com/images/2014/11/ski-snowboard-shop-1.jpg); background-size: 100%; background-repeat: no-repeat; ">
             <div class="container">
                 <div class="row title">
-                    <h2 class="h2">Login-Register</h2>
-                    <div class="page-breadcrumb">
-                        <a>Home</a>/<span>Login-Register</span>
-                    </div>
+                    <h2 class="h2" style="color:white">Checkout</h2>
                 </div>
             </div>
         </section>
         <!-- End Intro Section -->
-        
-        <!-- Login Section -->
-        <section id="Pricing" class="ptb ptb-sm-80" style="background-image: url('https://ak3.picdn.net/shutterstock/videos/12862463/thumb/1.jpg'); background-size: 100%;">
+
+        <!-- Checkout Section -->
+        <section class="ptb ptb-sm-80">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2">
-                        <div class="tabs b-lrb-none">
-
-                            <ul>
-                                <li><a href="#tabs-1">Login</a></li>
-                                <li><a href="#tabs-2">Register</a></li>
-                            </ul>
-                            <div class="ui-tab-content">
-                                <div id="tabs-1" class="plr-0">
-                                    <h4>Customer Login</h4>
+                    <div class="col-md-12">
+                        <table class="table checkout table-border">
+                            <tr class="gray-bg">
+                                <th class="hidden-xs"></th>
+                                <th>Product</th>
+                                <th class="hidden-xs">Price</th>
+                                <th>Total Items to Rent</th>
+                                <th>Total Rental Days</th>
+                                <th>Total</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td class="hidden-xs">
+                                    <a href="">
+                                        <img src="img/fishw.jpg" />
+                                    </a>
+                                </td>
+                                <td>
+                                    <h6><a href="#">Fischer My MTN 77</a></h6>
+                                    <p class="mt-0">
+                                        <small>SKU : #235145</small>
+                                        <small>Color : Purple Grid Topsheet</small>
+                                        <small>Size : 163-188</small>
+                                    </p>
+                                </td>
+                                <td class="hidden-xs">$60/Day</td>
+                                <td>
                                     <form>
-                                        <div class="form-field-wrapper">
-                                            <label for="login-email">Email address</label>
-                                            <input type="email" required="" placeholder="Enter your Email" name="login-email" id="login-email" class="input-sm form-full" aria-required="true">
-                                        </div>
-                                        <div class="form-field-wrapper">
-                                            <label for="login-pass">Password</label>
-                                            <input type="password" required="" placeholder="Enter your Password" name="login-pass" id="login-pass" class="input-sm form-full" aria-required="true">
-                                        </div>
-                                        <button name="submit" id="Button1" type="submit" class="btn btn-md btn-black">Sign In</button>
-                                        <a class="float-right">Forgot password?</a>
+                                        <input type="number" value="1" max="50" min="1" style="width: 100%; max-width: 70px;" class="input-md">
                                     </form>
-                                </div>
-                                <div id="tabs-2" class="plr-0">
-                                    <h4>Create Account</h4>
+                                </td>
+                                <td>
                                     <form>
-                                        <div class="form-field-wrapper">
-                                            <label for="signup-email">Email address</label>
-                                            <input type="email" required="" placeholder="Enter your Email" name="signup-email" id="signup-email" class="input-sm form-full" aria-required="true">
-                                        </div>
-                                        <div class="form-field-wrapper">
-                                            <label for="login-email">Choose Username</label>
-                                            <input type="text" required="" placeholder="Enter your Username" name="signup-username" id="signup-username" class="input-sm form-full" aria-required="true">
-                                        </div>
-                                        <div class="form-field-wrapper">
-                                            <label for="login-email">Phone</label>
-                                            <input type="text" required="" placeholder="Enter your phone no." name="signup-phone" id="signup-phone" class="input-sm form-full" aria-required="true">
-                                        </div>
-                                        <div class="form-field-wrapper">
-                                            <label for="signup-pass">Choose Password</label>
-                                            <input type="password" required="" placeholder="Enter Password" name="signup-pass" id="signup-pass" class="input-sm form-full" aria-required="true">
-                                        </div>
-                                        <div class="form-field-wrapper">
-                                            <label for="signup-pass">Re-enter Password</label>
-                                            <input type="password" required="" placeholder="Enter Re-enter Password" name="signup-re-pass" id="signup-re-pass" class="input-sm form-full" aria-required="true">
-                                        </div>
-                                        <button name="submit" id="form-submit" type="submit" class="btn btn-md btn-black">Signup Now</button>
+                                        <input type="number" value="1" max="50" min="1" style="width: 100%; max-width: 70px;" class="input-md">
                                     </form>
-                                </div>
-                            </div>
+                                </td>
 
+                                <td>$60.00</td>
+                                <td><a><i class="fa fa-times-circle"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td class="hidden-xs">
+                                    <a href="">
+                                        <img src="img/swcorn.jpg" />
+                                    </a>
+                                </td>
+                                <td>
+                                    <h6><a href="#">Sego Wizard</a></h6>
+                                    <p class="mt-0">
+                                        <small>SKU : #XYZ550</small>
+                                        <small>Color : Unicorn Awesomeness</small>
+                                        <small>Size : 152-178</small>
+                                    </p>
+                                </td>
+                             <td class="hidden-xs">$80/Day</td>
+                                <td>
+                                    <form>
+                                        <input type="number" value="1" max="50" min="1" style="width: 100%; max-width: 70px;" class="input-md">
+                                    </form>
+                                </td>
+                                <td>
+                                    <form>
+                                        <input type="number" value="1" max="50" min="1" style="width: 100%; max-width: 70px;" class="input-md">
+                                    </form>
+                                </td>
 
+                                <td>$80.00</td>
+                                <td><a><i class="fa fa-times-circle"></i></a></td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+                <div class="row ptb-30">
+                    <div class="col-md-8">
+                    </div>
+                    <div class="col-md-4">
+                        <form>
+                            <input type="submit" value="Update Cart" name="updateCart" class="btn btn-md btn-black float-right float-none-sm" />
+                        </form>
+                    </div>
+                </div>
+                <hr />
+                <div class="row ptb-60">
+                    <div class="col-md-4 mb-sm-60">
+                    </div>
+                    <div class="col-md-4 offset-md-4">
+                        <div class="shop-Cart-totalbox">
+                            <h4>Cart Totals</h4>
+                            <table class="table table-border">
+                                <tr>
+                                    <th>Cart Subtotal :</th>
+                                    <td>$140.00</td>
+                                </tr>
+                                <tr>
+                                    <th>Tax :</th>
+                                    <td>$2.00</td>
+                                </tr>
+                                <tr class="shop-Cart-totalprice">
+                                    <th>Total :</th>
+                                    <td>$142.00</td>
+                                </tr>
+                            </table>
+                            <button value="" type="submit" class="btn btn-lg btn-color-b form-full">Proceed to Checkout<i class="fa fa-chevron-right right"></i></button>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
-        <!-- End Login Section -->
+        <!-- End Checkout Section -->
 
-        <!-- End CONTENT ------------------------------------------------------------------------------>
+        <!-- END CONTENT ---------------------------------------------------------------------------->
 
-        <!-- FOOTER -->
+       <!-- FOOTER -->
         <footer class="footer pt-80">
             <div class="container">
                 <div class="row mb-60">
@@ -331,18 +365,6 @@
                             <img src="img/sarrow.png" /></a>
                     </div>
                     <!-- Logo -->
-
-                    <!-- Newsletter -->
-                    <div class="col-md-4 col-sm-5 mb-xs-30">
-                        <div class="newsletter">
-                            <form>
-                                <input type="email" class="newsletter-input input-md newsletter-input mb-0" placeholder="Enter Your Email">
-                                <button class="newsletter-btn btn btn-xs btn-white" type="submit" value=""><i class="fa fa-angle-right mr-0"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                    <!-- End Newsletter -->
-
                     <!-- Social -->
                     <div class="col-md-3 offset-md-2 col-sm-4">
                         <ul class="social">
@@ -405,7 +427,6 @@
         </a>
         <!-- End Scroll Top -->
     </div>
-    <!-- Site Wraper End -->
     <!-- JS -->
     <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
     <script src="js/jquery-ui.min.js" type="text/javascript"></script>
@@ -423,9 +444,10 @@
     <script src="js/plugin/imagesloaded.pkgd.min.js" type="text/javascript"></script>
     <script src="js/plugin/jquery.fs.tipper.min.js" type="text/javascript"></script>
     <script src="js/plugin/mediaelement-and-player.min.js"></script>
-    <script src="js/plugin/jquery.validate.min.js" type="text/javascript"></script>
     <script src="js/plugin/sidebar-menu.js" type="text/javascript"></script>
     <script src="js/theme.js" type="text/javascript"></script>
     <script src="js/navigation.js" type="text/javascript"></script>
+
+
 </body>
 </html>
