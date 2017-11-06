@@ -4,7 +4,11 @@ var Sequelize = require('sequelize');
 var configs = {
   "sherpa": {
     "username": "root",
+<<<<<<< HEAD
+    "password": "lamn4651",
+=======
     "password": null,
+>>>>>>> 47a43ca9ad87842314afca24390aa7de8ec5f1c3
     "database": "sherpaDB",
     "host": "127.0.0.1",
     "dialect": "mysql"
