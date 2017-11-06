@@ -28,7 +28,12 @@
     "method-override": "~2.3.10",
     "morgan": "~1.9.0",
     "mysql": "^2.15.0",
+<<<<<<< HEAD
     "mysql2": "^1.4.2",
+=======
+    "sequelize": "^4.22.0",
+    "sequelize-cli": "^3.0.0",
+>>>>>>> 47a43ca9ad87842314afca24390aa7de8ec5f1c3
     "passport": "~0.4.0",
     "passport-local": "~1.0.0",
     "sequelize": "^4.22.4"
