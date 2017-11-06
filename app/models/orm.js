@@ -15,10 +15,11 @@ var sherpaDB = new Sequelize(configs['sherpa'].database,
   configs['sherpa'].username, configs['sherpa'].password, configs['sherpa']);
 
 var equipment = sherpaDB.define('equipment', {
-  package_level: Sequelize.STRING(5),
+  equipment_brand: Sequelize.STRING(100),
   equipment_name: Sequelize.STRING(100),
-  size: Sequelize.STRING(5),
-  season_name: Sequelize.STRING(10),
+  description: Sequelize.STRING(100),
+  sku: Sequelize.STRING(6),
+  pic: Sequelize.STRING(255),
   price: Sequelize.DECIMAL(10,2),
   stock_quantity: Sequelize.INTEGER(10)
 });
@@ -26,7 +27,7 @@ var equipment = sherpaDB.define('equipment', {
 var reservations = sherpaDB.define('reservations', {
   product_name: Sequelize.STRING(100),
   department_name: Sequelize.STRING(100),
-  price: Sequelize.DECIMAL(10,2),
+  total_price: Sequelize.DECIMAL(10,2),
   user_id: Sequelize.INTEGER,
   equipment_id: Sequelize.INTEGER,
   payment_id: Sequelize.INTEGER
@@ -41,7 +42,9 @@ var payments = sherpaDB.define('payments', {
 
 var systemUsers = sherpaDB.define('systemUsers', {
   type: Sequelize.STRING(5),
-  email: Sequelize.STRING(100),
+  email: { 
+    type: Sequelize.STRING(40), unique: true
+  },
   password: Sequelize.STRING(100), 
   last_name: Sequelize.STRING(100),
   first_name: Sequelize.STRING(100),
@@ -50,7 +53,7 @@ var systemUsers = sherpaDB.define('systemUsers', {
 
 sherpaDB.sync().then(function() {
   // The line below for test purposes
-  // sherpaTests();
+  sherpaTests();
 });
 
 function sherpaTests() {
