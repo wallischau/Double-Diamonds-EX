@@ -1,33 +1,101 @@
-// var Sequelize = require('sequelize');
-// var sequelize = new Sequelize('sherpaDB', 'username', 'password');
-// var test = new Sequelize('testDB', 'username', 'password');
-// below code is a table within the db and its components and I do this for each column within each table within the db
-// building out the models here.
-// var User = sequelize.define('user', {
-//   username: Sequelize.STRING,
-//   birthday: Sequelize.DATE
-// });
+var Sequelize = require('sequelize');
 
-// var User = sequelize.define('user', {
-//   username: Sequelize.STRING,
-//   birthday: Sequelize.DATE
-// });
-// // if this is for the testDB, then this is how it would be referenced
-// var User = test.define('user', {
-//   username: Sequelize.STRING,
-//   birthday: Sequelize.DATE
-// });
-//  //seeding a new user into the database, look at this again after I discuss with the team, how are we going to populate (with dummy data???)
-//  // .sync is a sequalize method that prepares the database for changes
-// sequelize.sync().then(function() {
-//   return User.create({
-//     username: 'janedoe',
-//     birthday: new Date(1980, 6, 20)
-//   });
-//  // once sync (a built in method, there are lots of built in methods that do different things with your database) has been succesfully executed, then populate the database with the object of jane (new user)
-//  //create a loop 
-// }).then(function(jane) {
-//   console.log(jane.get({
-//     plain: true
-//   }));
-// });
+// TODO: Need to add support for multiple configs (dev/prod) and heroku
+var configs = {
+  "sherpa": {
+    "username": "root",
+    "password": "lamn4651",
+    "database": "sherpaDB",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+};
+
+var sherpaDB = new Sequelize(configs['sherpa'].database,
+  configs['sherpa'].username, configs['sherpa'].password, configs['sherpa']);
+
+var equipment = sherpaDB.define('equipment', {
+  package_level: Sequelize.STRING(5),
+  equipment_name: Sequelize.STRING(100),
+  size: Sequelize.STRING(5),
+  season_name: Sequelize.STRING(10),
+  price: Sequelize.DECIMAL(10,2),
+  stock_quantity: Sequelize.INTEGER(10)
+});
+
+var reservations = sherpaDB.define('reservations', {
+  product_name: Sequelize.STRING(100),
+  department_name: Sequelize.STRING(100),
+  price: Sequelize.DECIMAL(10,2),
+  user_id: Sequelize.INTEGER,
+  equipment_id: Sequelize.INTEGER,
+  payment_id: Sequelize.INTEGER
+});
+
+var payments = sherpaDB.define('payments', {
+  type: Sequelize.STRING(50),
+  number: Sequelize.STRING(100),
+  expire: Sequelize.DATE,
+  amount: Sequelize.DECIMAL(10,2)
+});
+
+var systemUsers = sherpaDB.define('systemUsers', {
+  type: Sequelize.STRING(5),
+  email: Sequelize.STRING(100),
+  password: Sequelize.STRING(100), 
+  last_name: Sequelize.STRING(100),
+  first_name: Sequelize.STRING(100),
+  phone: Sequelize.STRING(20)
+});
+
+sherpaDB.sync().then(function() {
+  // The line below for test purposes
+  // sherpaTests();
+});
+
+function sherpaTests() {
+  // Create a test user
+  systemUsers.create({
+    email: 'kelly@sherpa.com',
+    password: 'monetize',
+    type: 'user',
+    last_name: 'rene',
+    first_name: 'kelly',
+    phone: '123-456-7890',
+  })
+  .then(function(results) {
+    console.log("Results:", results.get({plain: true}));
+    console.log("----------");
+    // Update the email for the user
+    var userId = results.id;
+    systemUsers.update({
+      email: 'kelly@imnotyoursherpa.com'
+    }, {
+      where: {
+        id: userId
+      }
+    })
+    .then(function(results) {
+      console.log("Results:", results);
+      console.log("----------");
+      // Remove the user from the db
+      systemUsers.destroy({
+        where: {
+          id: userId
+        }
+      })
+      .then(function(results) {
+        console.log("Results:", results);
+        console.log("----------");
+      });
+    });
+  });
+}
+
+var db = {
+	equipment: equipment,
+	reservations: reservations,
+	payments: payments,
+	systemUsers: systemUsers
+};
+module.exports = db;
