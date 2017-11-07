@@ -4,8 +4,8 @@ var Sequelize = require('sequelize');
 var configs = {
   "sherpa": {
     "username": "root",
-    "password": null,
-    "database": "sherpaDB",
+    "password": "lamn4651",
+    "database": "sherpadbone",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
@@ -53,7 +53,7 @@ var systemUsers = sherpaDB.define('systemUsers', {
 
 sherpaDB.sync().then(function() {
   // The line below for test purposes
-  sherpaTests();
+  // sherpaTests();
 });
 
 function sherpaTests() {
