@@ -45,7 +45,7 @@ $.get("/api/all", function(data){
         
                                 <td class="hidden-xs">
                                     <a href="">
-                                        <img src="img/fishw.jpg" />
+                                        <img src="${data[i].pic}" />
                                     </a>
                                 </td>
                                 <td>
@@ -94,7 +94,7 @@ $.get("/api/all", function(data){
                         <div class="shop-detail-item">
                             <!--Item Images-->
                             <div class="sp-wrap">
-                                    <img src="img/fishw.jpg" alt="">
+                                    <img src="${data[i].pic}" alt="">
                             </div>
 
                         </div>
@@ -153,6 +153,46 @@ $.get("/api/all", function(data){
 	}
 });
 
+
+$.get("/api/all", function(data){
+    console.log(data + "the data should be here");
+    for(var i=0; i<8; i++){
+     var newPanelThree = $(`
+         <div class="nf-item col-md-3 col-sm-6 mb-30">
+                        <div class="item-box">
+                            <!-- Shop item images -->
+                            <div class="shop-item">
+                                <div class="item-img">
+                                    <img src= "${data[i].pic}" />
+                                </div>
+                                <div class="item-mask">
+                                    <div class="item-mask-detail">
+                                        <div class="item-mask-detail-ele">
+                                            <a class="btn btn-line-xs btn-white-line"><i class="fa fa-shopping-cart"></i>Rent Me</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Shop item images -->
+
+                            <!-- Shop item info -->
+                            <div class="shop-item-info">
+                                <a href="shop-detail.html">
+                                    <h6 class="shop-item-name">${data[i].equipment_name}</h6>
+                                </a>
+                                <div class="shop-item-price"><span>${data[i].price}</span></div>
+                                    <p>Details:${data[i].description}</p>
+                            </div>
+                            <!-- Shop item info -->
+                        </div>
+                    </div>
+            
+        `);
+
+        $('#sup-well').append(newPanelThree);
+
+    }
+});
 
 
 

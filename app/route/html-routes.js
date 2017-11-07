@@ -23,6 +23,9 @@ module.exports = function(app) {
 	app.get("/skis", function(req,res){
 		res.sendFile(path.join(__dirname, "../../public/ski.html"))
 	});
+	app.get("/sups", function(req,res){
+		res.sendFile(path.join(__dirname, "../../public/sup.html"))
+	});
 	app.get("/allitems", function(req,res){
 		res.sendFile(path.join(__dirname, "../../public/api/all"))
 	});
