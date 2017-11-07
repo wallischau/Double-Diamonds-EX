@@ -10,14 +10,15 @@ module.exports = function(app){
 	});
 
 	 app.get("/api/:id", function(req, res) {
-     // Find one Author with the id in req.params.id and return them to the user with res.json
+     // Find one equipment with the id in req.params.id and return them to the user with res.json
     if(req.params.id)
-    db.equipment.findAll({
+    db.equipment.findOne({
       where: {
        id: req.params.id
       }
     }).then(function(results) {
-      res.json(results);
+      return res.json(results);
+
     });
   });
 
