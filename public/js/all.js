@@ -43,49 +43,49 @@ $.get("/api/all", function(data){
 		$('#well-section').append(newPanel);
 
 	}
-});
+}); //.get(api/all)
 
-/* this section does not add item to the page? */
-$.get("/api/all", function(data){
- console.log(data + "the data should be here");
- for(var i=0; i< 1; i++){
-     var newPanelTwo = $(`
+// /* this section does not add item to the page? */
+// $.get("/api/all", function(data){
+//  console.log(data + "the data should be here");
+//  for(var i=0; i< 1; i++){
+//      var newPanelTwo = $(`
         
-                                <td class="hidden-xs">
-                                    <a href="">
-                                        <img src="img/fishw.jpg" />
-                                    </a>
-                                </td>
-                                <td>
-                                    <h6><a href="#">${data[i].equipment_name}</a></h6>
-                                    <p class="mt-0">
-                                        <small>SKU : #235145</small>
-                                        <small>Color : Purple Grid Topsheet</small>
-                                        <small>Size : 163-188</small>
-                                    </p>
-                                </td>
-                                <td class="hidden-xs">${data[i].price}</td>
-                                <td>
-                                    <form>
-                                        <input type="number" value="1" max="50" min="1" style="width: 100%; max-width: 70px;" class="input-md">
-                                    </form>
-                                </td>
-                                <td>
-                                    <form>
-                                        <input type="number" value="1" max="50" min="1" style="width: 100%; max-width: 70px;" class="input-md">
-                                    </form>
-                                </td>
+//                                 <td class="hidden-xs">
+//                                     <a href="">
+//                                         <img src="img/fishw.jpg" />
+//                                     </a>
+//                                 </td>
+//                                 <td>
+//                                     <h6><a href="#">${data[i].equipment_name}</a></h6>
+//                                     <p class="mt-0">
+//                                         <small>SKU : #235145</small>
+//                                         <small>Color : Purple Grid Topsheet</small>
+//                                         <small>Size : 163-188</small>
+//                                     </p>
+//                                 </td>
+//                                 <td class="hidden-xs">${data[i].price}</td>
+//                                 <td>
+//                                     <form>
+//                                         <input type="number" value="1" max="50" min="1" style="width: 100%; max-width: 70px;" class="input-md">
+//                                     </form>
+//                                 </td>
+//                                 <td>
+//                                     <form>
+//                                         <input type="number" value="1" max="50" min="1" style="width: 100%; max-width: 70px;" class="input-md">
+//                                     </form>
+//                                 </td>
 
-                                <td>$60.00</td>
-                                <td><a><i class="fa fa-times-circle"></i></a></td>
+//                                 <td>$60.00</td>
+//                                 <td><a><i class="fa fa-times-circle"></i></a></td>
                            
          
-         `);
+//          `);
 
-     $('#well-section-table').append(newPanelTwo);
+//      $('#well-section-table').append(newPanelTwo);
 
- }
-});
+//  }
+// });
 // $("#rent-me").on("click", function(event){
 //     event.preventDefault();
 
