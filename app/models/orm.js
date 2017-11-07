@@ -53,7 +53,7 @@ var systemUsers = sherpaDB.define('systemUsers', {
 
 sherpaDB.sync().then(function() {
   // The line below for test purposes
-  sherpaTests();
+  // sherpaTests();
 });
 
 function sherpaTests() {
