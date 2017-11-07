@@ -8,7 +8,7 @@ $.get("/api/all", function(data){
                             <!-- Shop item images -->
                             <div class="shop-item">
                                 <div class="item-img">
-                                    <img src="img/fishw.jpg" />
+                                    <img src="${data[i].pic}" />
                                 </div>
                                 <div class="item-mask">
                                     <div class="item-mask-detail">
@@ -24,7 +24,7 @@ $.get("/api/all", function(data){
                                 <a href="shop-detail.html">
                                     <h6 class="shop-item-name">${data[i].equipment_name}</h6>
                                 <div class="shop-item-price"><span>${data[i].price}</span></div>
-                                <p>some info?</p>
+                                <p>${data[i].description}</p>
                             </div>
                             <!-- Shop item info -->
                         </div>
@@ -45,13 +45,13 @@ $.get("/api/all", function(data){
         
                                 <td class="hidden-xs">
                                     <a href="">
-                                        <img src="img/fishw.jpg" />
+                                        <img src="${data[i].pic}" />
                                     </a>
                                 </td>
                                 <td>
                                     <h6><a href="#">${data[i].equipment_name}</a></h6>
                                     <p class="mt-0">
-                                        <small>SKU : #235145</small>
+                                        <small>SKU : #${data[i].sku}</small>
                                         <small>Color : Purple Grid Topsheet</small>
                                         <small>Size : 163-188</small>
                                     </p>
@@ -68,7 +68,7 @@ $.get("/api/all", function(data){
                                     </form>
                                 </td>
 
-                                <td>$60.00</td>
+                                <td>${data[i].price}</td>
                                 <td><a><i class="fa fa-times-circle"></i></a></td>
                            
          
@@ -94,7 +94,7 @@ $.get("/api/all", function(data){
                         <div class="shop-detail-item">
                             <!--Item Images-->
                             <div class="sp-wrap">
-                                    <img src="img/fishw.jpg" alt="">
+                                    <img src="${data[i].pic}" alt="">
                             </div>
 
                         </div>
@@ -107,16 +107,16 @@ $.get("/api/all", function(data){
                             <h4>${data[i].equipment_name}</h4>
                             <div class="shop-item-price mtb-15 ptb-15"><span>${data[i].price}</span></div>
                             <hr />
-                            <p class="ptb-15">Details pulled from the DB </p>
+                            <p class="ptb-15">${data[i].description}</p>
                             <ul class="project-detail-block ptb-15">
                                 <li>
                                     <p>
-                                        <strong class="dark-color">Brand :</strong><span>Fisher</span>
+                                        <strong class="dark-color">Brand :</strong><span>${data[i].brand}</span>
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        <strong class="dark-color">SKU :</strong><span>#235145</span>
+                                        <strong class="dark-color">SKU :</strong><span>${data[i].price}</span>
                                     </p>
                                 </li>
                             </ul>
@@ -153,6 +153,46 @@ $.get("/api/all", function(data){
 	}
 });
 
+
+$.get("/api/all", function(data){
+    console.log(data + "the data should be here");
+    for(var i=0; i<8; i++){
+     var newPanelThree = $(`
+         <div class="nf-item col-md-3 col-sm-6 mb-30">
+                        <div class="item-box">
+                            <!-- Shop item images -->
+                            <div class="shop-item">
+                                <div class="item-img">
+                                    <img src= "${data[i].pic}" />
+                                </div>
+                                <div class="item-mask">
+                                    <div class="item-mask-detail">
+                                        <div class="item-mask-detail-ele">
+                                            <a class="btn btn-line-xs btn-white-line"><i class="fa fa-shopping-cart"></i>Rent Me</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Shop item images -->
+
+                            <!-- Shop item info -->
+                            <div class="shop-item-info">
+                                <a href="shop-detail.html">
+                                    <h6 class="shop-item-name">${data[i].equipment_name}</h6>
+                                </a>
+                                <div class="shop-item-price"><span>${data[i].price}</span></div>
+                                    <p>Details:${data[i].description}</p>
+                            </div>
+                            <!-- Shop item info -->
+                        </div>
+                    </div>
+            
+        `);
+
+        $('#sup-well').append(newPanelThree);
+
+    }
+});
 
 
 
