@@ -1,14 +1,20 @@
 $(document).ready(function(){
 /* Code for extracting the input parameters from the url */
  var parameters = window.location.search.substring(1).split("&");
- var p1 = parameters[0].split("=");
- var id = unescape(p1[1]);
- // var pr_1 = para_1.substr(0,para_1.length-1);
- console.log(parameters);
-console.log(id);
+ if (parameters.length > 1) {
+
+    var p1 = parameters[0].split("=");
+    var id = unescape(p1[1]);
+    console.log(parameters);
+    console.log(id);
+ }
 
 var item_quantity = 1;
 var item_duration = 1;
+sessionStorage.removeItem("quantity");
+sessionStorage.removeItem("duration");
+sessionStorage.setItem("quantity", item_quantity);
+sessionStorage.setItem("duration", item_duration);
 
 $.get("/api/" + id, function(data){
 	console.log(data,  " the data should be here");
@@ -90,13 +96,11 @@ $.get("/api/" + id, function(data){
 //$("#item-quantity").on("change", function() {
 $(document).on("change", "#item-quantity", function() {
         item_quantity = $(this).val();
-        console.log(item_quantity);
         sessionStorage.setItem("quantity", item_quantity);
 
 });
 $(document).on("change","#item-duration", function() {
         item_duration = $(this).val();
-        console.log(item_duration);
         sessionStorage.setItem("duration", item_duration);
 });
 

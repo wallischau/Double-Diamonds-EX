@@ -1,31 +1,29 @@
 $(document).ready(function(){
 /* Code for extracting the input parameters from the url */
- var parameters = window.location.search.substring(1).split("&");
- var p1 = parameters[0].split("=");
- var p2 = parameters[1].split("=");
- var p3 = parameters[2].split("=");
- var id = unescape(p1[1]);
- // var quantity = unescape(p2[1]);
- // var duration = unescape(p3[1]);
- // var pr_1 = para_1.substr(0,para_1.length-1);
+var parameters = window.location.search.substring(1).split("&");
+console.log(parameters);
+if (parameters.length > 1) {
 
- console.log(parameters);
-console.log(id);
-// console.log(quantity);
-// console.log(duration);
+    var p1 = parameters[0].split("=");
+    var p2 = parameters[1].split("=");
+    var p3 = parameters[2].split("=");
+    var id = unescape(p1[1]);
 
+    console.log(parameters);
+    console.log(id);
+}
 var quantity = sessionStorage.getItem("quantity");
 var duration = sessionStorage.getItem("duration");
 
 var cost = 0;
+var price = 0;
 var subtotal = 0;
-var tax = 0;
-var total = 0;
-var taxRate = 0.05;
+const TAXRATE = 0.05;
 
 $.get("/api/" + id, function(data){
  console.log(data, "the data should be here");
- cost = quantity * duration * data.price;	
+ price = data.price;
+ cost = quantity * duration * price;	
      var newPanelTwo = $(`
         
                                 <td class="hidden-xs">
@@ -44,25 +42,30 @@ $.get("/api/" + id, function(data){
                                 <td class="hidden-xs">${data.price}</td>
                                 <td>
                                     <form>
-                                        <input type="number" value="${quantity}" max="50" min="1" style="width: 100%; max-width: 70px;" class="input-md">
+                                        <input id="item-quantity" type="number" value="${quantity}" max="50" min="1" style="width: 100%; max-width: 70px;" class="input-md">
                                     </form>
                                 </td>
                                 <td>
                                     <form>
-                                        <input type="number" value="${duration}" max="50" min="1" style="width: 100%; max-width: 70px;" class="input-md">
+                                        <input id="item-duration" type="number" value="${duration}" max="50" min="1" style="width: 100%; max-width: 70px;" class="input-md">
                                     </form>
                                 </td>
 
-                                <td>$${cost}</td>
+                                <td id="cost">$${cost}</td>
                                 <td><a><i class="fa fa-times-circle"></i></a></td>
                            
          
          `);
 
-     $('#well-section-table').append(newPanelTwo);
+    $('#well-section-table').append(newPanelTwo);
+    //update cart total
+    updateTotalCost();
+}); //get /api
+
+function updateTotalCost() {
      subtotal += cost;
-     tax = subtotal * taxRate;
-     total = subtotal + tax;
+     var tax = subtotal * TAXRATE;
+     var total = subtotal + tax;
 
      console.log(subtotal);
      console.log(tax);
@@ -71,11 +74,22 @@ $.get("/api/" + id, function(data){
      $("#sub-total").html(`$${subtotal}`);
      $("#tax").html(`$${tax}` );
      $("#total-cost").html(`$${total}`);
-}); //get /api
+
+}
 
 
 $(document).on("click", "#cart-update", function() {
-
+    quantity = $("#item-quantity").val();
+    console.log(quantity);
+    sessionStorage.setItem("quantity", quantity);
+    duration = $("#item-duration").val();
+    console.log(duration);
+    sessionStorage.setItem("duration", duration);
+    //update total per equipment
+    cost = quantity * duration * price;    
+    $("#cost").html(`$${cost}`);
+    //update total all
+    updateTotalCost();
 });
 
 });//ready
