@@ -26,7 +26,8 @@ module.exports = function(app){
 		console.log("customer Data");
 		console.log(req.body);
 		//system users
-		db.systmeusers.create({
+		console.log(db.systemUsers)
+		db.systemUsers.create({
 			first_name: req.body.name,
 			last_name: req.body.name,
 			email: req.body.email,
