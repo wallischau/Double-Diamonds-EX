@@ -11,8 +11,12 @@ var configs = {
   }
 };
 
-var sherpaDB = new Sequelize(configs['sherpa'].database,
+if (process.env.JAWSDB_URL) {
+  var sequelize = new Sequelize(process.env.JAWSDB_URL);
+} else {
+  var sherpaDB = new Sequelize(configs['sherpa'].database,
   configs['sherpa'].username, configs['sherpa'].password, configs['sherpa']);
+}
 
 var equipment = sherpaDB.define('equipment', {
   equipment_brand: Sequelize.STRING(100),
