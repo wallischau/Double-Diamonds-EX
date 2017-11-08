@@ -1,6 +1,6 @@
 var Sequelize = require("sequelize");
 
-var sequelize = new Sequelize("sherpadb", "root", "lamn4651",{
+var sequelize = new Sequelize("sherpadb", "root", null,{
 	host: "localhost",
 	dialect: "mysql",
 	pool: {

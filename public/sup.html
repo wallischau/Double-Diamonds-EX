@@ -25,43 +25,13 @@
 </head>
 
 <body>
-    <!-- Preloader -->
+     <!-- Preloader -->
     <section id="preloader">
         <div class="loader" id="loader">
             <div class="loader-img"></div>
         </div>
     </section>
     <!-- End Preloader -->
-    <!-- Search Overlay Menu -->
-    <div class="search-overlay-menu">
-        <span class="search-overlay-close"><i class="ion ion-ios-close-empty"></i></span>
-        <form role="search" id="searchform" action="/search" method="get">
-            <input value="" name="q" type="search" placeholder="Search..." />
-            <button type="submit"><i class="ion ion-ios-search"></i></button>
-        </form>
-    </div>
-    <!-- End Search Overlay Menu -->
-    <!-- Sidemenu -->
-    <section id="pushmenu-right" class="pushmenu pushmenu-right side-menu">
-        <a id="menu-sidebar-close-icon" class="menu-close"><i class="ion ion-android-close"></i></a>
-        <h5 class="white">Sign In</h5>
-        <div class="sign-in">
-            <input class="input-sm form-full" type="email" aria-required="true" id="email" name="email" placeholder="Email" value="" />
-            <input class="input-sm form-full" type="password" aria-required="true" id="password" name="password" placeholder="Password" value="" />
-            <input type="submit" class="btn btn-md btn-color-b form-full" value="Sign In" />
-            <a>New Customer?</a>
-        </div>
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="login-register.html">Login & Signup</a></li>
-            <li><a href="faq-1.html">FAQ</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="service-1.html">Service</a></li>
-            <li><a href="shop-checkout.html">Shopping Cart</a></li>
-            <li><a href="contact-1.html">Contact Us</a></li>
-        </ul>
-    </section>
-    <!--End Sidemenu -->
     <!-- Site Wraper -->
     <div class="wrapper">
         <!-- Header -->
@@ -69,7 +39,7 @@
             <div class="container header-inner">
                 <!-- Logo -->
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="/">
                         <img class="logo-light" src="img/sarrow.png" alt="arrow" />
                         <img class="logo-dark" src="img/sarrow.png" alt="arrow" />
                     </a>
@@ -79,15 +49,9 @@
                 <!-- Rightside Menu (Search, Cart, Bart icon) -->
                 <div class="side-menu-btn">
                     <ul>
-                        <!-- Search Icon -->
-                        <li class="">
-                            <a class="search-overlay-menu-btn header-icon"><i class="fa fa-search"></i></a>
-                        </li>
-                        <!-- End Search Icon -->
-
                         <!-- Cart Icon -->
                         <li class="cart">
-                            <a class="header-icon" href="shop-checkout.html">
+                            <a class="header-icon" href="/shop-checkout">
                                 <i class="fa fa-shopping-cart"></i>
                                 <div class="cart-notification-wrap"><span class="cart-notification">2</span></div>
                             </a>
@@ -120,18 +84,11 @@
                                 <p class="cart-sub-totle"><span class="pull-left">Cart Subtotal</span><span class="pull-right totle"><strong>$798.00</strong></span></p>
                                 <div class="clearfix"></div>
                                 <div class="cart-checkout-btn">
-                                    <a href="shop-checkout.html" class="btn btn-md btn-color-b form-full checkout">Checkout</a>
+                                    <a href="/shop-checkout" class="btn btn-md btn-color-b form-full checkout">Checkout</a>
                                 </div>
                             </div>
                             <!-- End Cart Dropdown -->
                         </li>
-                        <!-- End Cart Icon -->
-
-                        <!--Sidebar Menu Icon-->
-                        <li class="">
-                            <a id="menu-sidebar-list-icon" class="nav-bar-icon"><span></span></a>
-                        </li>
-                        <!-- End Sidebar Menu Icon-->
                     </ul>
                 </div>
                 <!-- End Rightside Menu -->
@@ -146,89 +103,43 @@
                 <div class="nav-menu">
                     <ul class="nav-menu-inner">
                         <li>
-                            <a class="menu-has-sub" href="home.html">Home <i class="fa fa-angle-down"></i></a>
+                            <a class="menu-has-sub" href="/">Home <i class="fa fa-angle-down"></i></a>
                             <!-- Dropdown -->
                             <ul class="sub-dropdown dropdown">
-                                <li>
-                                    <a class="menu-has-sub" href='#'>Multi Page <i class="fa fa-angle-right"></i></a>
-                                    <ul class="sub-dropdown">
-                                        <li><a href="home.html">Home</a></li>
-                                        <li><a href="home.html">Test</a></li>
-                                        <li><a href="home.html">Test2</a></li>
-                                        <li><a href="home.html">Test3</a></li>
-
-                                    </ul>
-                                </li>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/about">About</a></li>
                             </ul>
                             <!-- End Dropdown -->
                         </li>
                         <li>
-                        <!-- Pages Links -->
-                            <a class="menu-has-sub">Pages <i class="fa fa-angle-down"></i></a>
+                        <!-- Gear Links -->
+                            <a class="menu-has-sub">Gear Rentals <i class="fa fa-angle-down"></i></a>
                             <!-- Dropdown -->
                             <ul class="sub-dropdown dropdown">
                                 <li>
-                                    <a class="menu-has-sub">About Us <i class="fa fa-angle-right"></i></a>
-                                    <ul class="sub-dropdown">
-                                        <li><a href="about.html">About</a></li>
-                                    </ul>
+                                    <a href="/skis">Skis</a>
                                 </li>
                                 <li>
-                                    <a class="menu-has-sub">Services <i class="fa fa-angle-right"></i></a>
-                                    <ul class="sub-dropdown">
-                                        <li><a href="service-1.html">Service 1</a></li>
-<!--                                         <li><a href="service-2.html">Service 2</a></li>
-                                        <li><a href="service-3.html">Service 3</a></li> -->
-                                    </ul>
+                                    <a href="/sups">Paddleboards</a>
                                 </li>
                                 <li>
-                                    <a class="menu-has-sub">Contact Us <i class="fa fa-angle-right"></i></a>
-                                    <ul class="sub-dropdown">
-                                        <li><a href="contact-1.html">Contact 1</a></li>
-                                        <li><a href="contact-2.html">Contact 2</a></li>
-                                        <li><a href="contact-3.html">Contact 3</a></li>
-                                    </ul>
-                                </li>
+                                    <a href="/bikes">Bikes</a>
+                                </li> 
                                 <li>
-                                    <a class="menu-has-sub">Faq<i class="fa fa-angle-right"></i></a>
-                                    <ul class="sub-dropdown">
-                                        <li><a href="faq-1.html">Faq 1</a></li>
-                                        <li><a href="faq-2.html">Faq 2</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a class="menu-has-sub">Login / Register<i class="fa fa-angle-right"></i></a>
-                                    <ul class="sub-dropdown">
-                                        <li><a href="login.html">Login</a></li>
-                                        <li><a href="register.html">Register</a></li>
-                                        <li><a href="login-register.html">Login / Register</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="pricing.html">Pricing</a></li>
-                                <li><a href="blank-page.html">Blank Page</a></li>
-                            </ul>
-                            <!-- End Dropdown -->
-                        </li>
-                        <li>
-                            <a class="menu-has-sub">Shop <i class="fa fa-angle-down"></i></a>
-                            <!-- Dropdown -->
-                            <ul class="sub-dropdown dropdown">
-                                <li><a href="shop-2col.html">Summer Gear Rentals</a></li>
-                                <li><a href="shop-3col.html">Winter Gear Rentals</a></li>
-                                <li><a href="shop-right-sidebar.html">Right Sidebar</a></li>
-                                <li><a href="shop-detail.html">Shop Detail</a></li>
-                                <li><a href="shop-checkout.html">Checkout</a></li>
+                                    <a href="/kayaks">Kayaks</a>
+                                </li>    
+                                 <li>
+                                    <a href="/kayaks">Camping</a>
+                                </li>                                          
                             </ul>
                             <!-- End Dropdown -->
                         </li>
                     </ul>
                 </div>
                 <!-- End Navbar Navigation -->
-
             </div>
         </header>
         <!-- End Header -->
-
         <!-- CONTENT --------------------------------------------------------------------------------->
         <!-- Intro Section -->
         <section class="inner-intro dark-bg bg-image overlay-dark parallax parallax-background1" style="background-image: url(https://media.giphy.com/media/WsCuSZPK051vy/giphy.gif); height: 100%; " >
@@ -245,7 +156,7 @@
         </section>
         <!-- End Intro Section -->
         
-        <!-- Shop Item Section -->
+         <!-- Shop Item Section -->
         <section id="shop-item" class="ptb ptb-sm-80">
             <div class="container">
                 <!-- Sort List -->
@@ -275,14 +186,40 @@
 
                 <!-- Shop Item -->
                 <div class="row container-grid">
-                <div id="sup-well"> </div>
 
-                    
-
-                 <!--    <div class="nf-item col-md-3 col-sm-6 mb-30">
-                        <div class="item-box"> -->
+                    <div class="nf-item col-md-3 col-sm-6 mb-30">
+                        <div class="item-box">
                             <!-- Shop item images -->
-                           <!--  <div class="shop-item">
+                            <div class="shop-item">
+                                <div class="item-img">
+                                    <img src="img/sbear.jpg" />
+                                </div>
+                                <div class="item-mask">
+                                    <div class="item-mask-detail">
+                                        <div class="item-mask-detail-ele">
+                                            <a class="btn btn-line-xs btn-white-line"><i class="fa fa-shopping-cart"></i>Rent Me</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Shop item images -->
+
+                            <!-- Shop item info -->
+                            <div class="shop-item-info">
+                                <a href="/shop-detail">
+                                    <h6 class="shop-item-name">Boardworks Great Bear</h6>
+                                </a>
+                                <div class="shop-item-price"><span>$80/Day</span></div>
+                                <p>Details: 14' Expedition Board. Great for heavy chop and wind.</p>
+                            </div>
+                            <!-- Shop item info -->
+                        </div>
+                    </div>
+
+                    <div class="nf-item col-md-3 col-sm-6 mb-30">
+                        <div class="item-box">
+                            <!-- Shop item images -->
+                            <div class="shop-item">
                                 <div class="item-img">
                                     <img src="img/sraven.jpg" />
                                 </div>
@@ -293,24 +230,24 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
                             <!-- End Shop item images -->
 
                             <!-- Shop item info -->
-                            <!-- <div class="shop-item-info">
-                                <a href="shop-detail.html">
+                            <div class="shop-item-info">
+                                <a href="/shop-detail">
                                     <h6 class="shop-item-name">Boardworks Raven</h6>
                                 <div class="shop-item-price"><del>$80/Day</del><span>$60/Day</span></div>
                                 <p>Details: 12' 6 Touring board. Great for all conditions.</p>
-                            </div> -->
+                            </div>
                             <!-- Shop item info -->
-                       <!--  </div>
+                        </div>
                     </div>
- -->
-                 <!--    <div class="nf-item col-md-3 col-sm-6 mb-30">
-                        <div class="item-box"> -->
+
+                    <div class="nf-item col-md-3 col-sm-6 mb-30">
+                        <div class="item-box">
                             <!-- Shop item images -->
-                           <!--  <div class="shop-item">
+                            <div class="shop-item">
                                 <div class="item-img">
                                     <img src="img/seradicator.jpg" />
                                 </div>
@@ -321,25 +258,25 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
                             <!-- End Shop item images -->
 
                             <!-- Shop item info -->
-                            <!-- <div class="shop-item-info">
-                                <a href="shop-detail.html">
+                            <div class="shop-item-info">
+                                <a href="/shop-detail">
                                     <h6 class="shop-item-name">Boardworks Eradicator</h6>
                                 </a>
                                 <div class="shop-item-price"><del>$80/day</del><span>$60/Day</span></div>
                                 <p>Details: 12'6 Killer racing board.</p>
-                            </div> -->
+                            </div>
                             <!-- Shop item info -->
-                       <!--  </div>
+                        </div>
                     </div>
 
                     <div class="nf-item col-md-3 col-sm-6 mb-30">
-                        <div class="item-box"> -->
+                        <div class="item-box">
                             <!-- Shop item images -->
-                           <!--  <div class="shop-item">
+                            <div class="shop-item">
                                 <div class="item-img">
                                     <img src="img/sshubur.jpg" />
                                 </div>
@@ -350,25 +287,25 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
                             <!-- End Shop item images -->
 
                             <!-- Shop item info -->
-                           <!--  <div class="shop-item-info">
-                                <a href="shop-detail.html">
+                            <div class="shop-item-info">
+                                <a href="/shop-detail">
                                     <h6 class="shop-item-name">Boardworks SHUBU Raven</h6>
                                 </a>
                                 <div class="shop-item-price"><span>$80.00</span></div>
                                     <p>Details: 12'6 Inflatable Touring SUP. Fits in a pack.</p>
-                            </div> -->
+                            </div>
                             <!-- Shop item info -->
-                    <!--     </div>
+                        </div>
                     </div>
 
                     <div class="nf-item col-md-3 col-sm-6 mb-30">
-                        <div class="item-box"> -->
+                        <div class="item-box">
                             <!-- Shop item images -->
-                            <!-- <div class="shop-item">
+                            <div class="shop-item">
                                 <div class="item-img">
                                     <img src="img/sbadfish.jpg" />
                                 </div>
@@ -379,25 +316,25 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
                             <!-- End Shop item images -->
 
                                     <!-- Shop item info -->
-                           <!--  <div class="shop-item-info">
-                                <a href="shop-detail.html">
+                            <div class="shop-item-info">
+                                <a href="/shop-detail">
                                     <h6 class="shop-item-name">Boardworks badfish</h6></a>
                                  <div class="shop-item-price"><span>$80/Day</span></div>
                                     <p>Details: 9' Whitewater board. For the SUP insane...</p>
-                            </div> -->
+                            </div>
                              <!-- Shop item info -->
-                        <!--  </div>
+                         </div>
                     </div>
 
  
                     <div class="nf-item col-md-3 col-sm-6 mb-30">
-                        <div class="item-box"> -->
+                        <div class="item-box">
                             <!-- Shop item images -->
-                            <!-- <div class="shop-item">
+                            <div class="shop-item">
                                 <div class="item-img">
                                     <img src="img/sjoyride.jpg" />
                                 </div>
@@ -408,24 +345,24 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
                             <!-- End Shop item images -->
 
                                     <!-- Shop item info -->
-                            <!-- <div class="shop-item-info">
-                                <a href="shop-detail.html">
+                            <div class="shop-item-info">
+                                <a href="/shop-detail">
                                     <h6 class="shop-item-name">Boardworks Joy Ride Flow </h6></a>
                                  <div class="shop-item-price"><span>$80/Day</span></div>
                                     <p>Details: 9'11 Cruising & Yoga Board</p>
-                            </div> -->
+                            </div>
                              <!-- Shop item info -->
-                  <!--        </div>
+                         </div>
                     </div>
         
                     <div class="nf-item col-md-3 col-sm-6 mb-30">
-                        <div class="item-box"> -->
+                        <div class="item-box">
                             <!-- Shop item images -->
-                           <!--  <div class="shop-item">
+                            <div class="shop-item">
                                 <div class="item-img">
                                     <img src="img/sshubum.jpg" />
                                 </div>
@@ -436,24 +373,24 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
                             <!-- End Shop item images -->
                                     <!-- Shop item info -->
-                            <!-- <div class="shop-item-info">
-                                <a href="shop-detail.html">
+                            <div class="shop-item-info">
+                                <a href="/shop-detail">
                                     <h6 class="shop-item-name">Boardworks SHUBU Muse</h6></a>
                                  <div class="shop-item-price"><span>$75/Day</span></div>
                                     <p>Details: 10'2 Cruising & Yoga Board. </p>
-                            </div> -->
+                            </div>
                 <!-- End Shop Item -->
                         <!-- Shop item info -->
-                       <!--   </div>
+                         </div>
                     </div>
         
                     <div class="nf-item col-md-3 col-sm-6 mb-30">
-                        <div class="item-box"> -->
+                        <div class="item-box">
                             <!-- Shop item images -->
-                          <!--   <div class="shop-item">
+                            <div class="shop-item">
                                 <div class="item-img">
                                     <img src="img/sfish.jpg" />
                                 </div>
@@ -464,16 +401,15 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
                             <!-- End Shop item images -->
                                     <!-- Shop item info -->
-                           <!--  <div class="shop-item-info">
-                                <a href="shop-detail.html">
+                            <div class="shop-item-info">
+                                <a href="/shop-detail">
                                     <h6 class="shop-item-name">Boardworks Tracker</h6></a>
                                  <div class="shop-item-price"><span>$80/Day</span></div>
                                     <p>Details: 11' Fishing board.</p>
-                            </div> -->
-
+                            </div>
                 <!-- Pagination Nav -->
 <!--                 <div class="pagination-nav mtb-30">
                     <ul>
@@ -517,17 +453,17 @@
                     </div>
                     <div class="col-md-3 col-sm-6 mb-sm-30 mb-xs-0">
                         <ul class="link">
-                            <li><a href="login-register.html">Login & Signup</a></li>
-                            <li><a href="faq-1.html">FAQ</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="service-1.html">Service</a></li>
+                            <li><a href="/login-register">Login & Signup</a></li>
+                            <li><a href="/faq">FAQ</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/service">Service</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 col-sm-6 mb-sm-30">
                         <ul class="link">
-                            <li><a href="contact-1.html">Contact Us</a></li>
-                            <li><a href="shop-checkout.html">Shopping Cart</a></li>
-                            <li><a href="home.html">Home</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
+                            <li><a href="/shop-checkout">Shopping Cart</a></li>
+                            <li><a href="/home">Home</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 col-sm-12">

@@ -30,51 +30,16 @@
         </div>
     </section>
     <!-- End Preloader -->
-    <!-- Search Overlay Menu -->
-    <div class="search-overlay-menu">
-        <span class="search-overlay-close"><i class="ion ion-ios-close-empty"></i></span>
-        <form role="search" id="searchform" action="/search" method="get">
-            <input value="" name="q" type="search" placeholder="Search..." />
-            <button type="submit"><i class="ion ion-ios-search"></i></button>
-        </form>
-    </div>
-    <!-- End Search Overlay Menu -->
-    <!-- Sidemenu -->
-    <section id="pushmenu-right" class="pushmenu pushmenu-right side-menu">
-        <a id="menu-sidebar-close-icon" class="menu-close"><i class="ion ion-android-close"></i></a>
-        <h5 class="white">Sign In</h5>
-        <div class="sign-in">
-            <input class="input-sm form-full" type="email" aria-required="true" id="email" name="email" placeholder="Email" value="" />
-            <input class="input-sm form-full" type="password" aria-required="true" id="password" name="password" placeholder="Password" value="" />
-            <input type="submit" class="btn btn-md btn-color-b form-full" value="Sign In" />
-            <a>New Customer?</a>
-        </div>
-        <ul>
-            <li><a class="all-demos-link" target="_blank" href="../demo.html">Main Demo Page</a></li>
-            <li><a href="home.html">Home Default</a></li>
-            <li><a href="portfolio-grid-2col.html">Portfolio</a></li>
-            <li><a href="login-register.html">Login & Signup</a></li>
-            <li><a href="faq-1.html">FAQ</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="service-1.html">Service</a></li>
-            <li><a href="shop-checkout.html">Shopping Cart</a></li>
-            <li><a href="contact-1.html">Contact Us</a></li>
-        </ul>
-    </section>
-    <!--End Sidemenu -->
-
     <!-- Site Wraper -->
     <div class="wrapper">
-
         <!-- Header -->
-        <header id="header" class="header header-light">
+        <header id="header" class="header">
             <div class="container header-inner">
-
                 <!-- Logo -->
                 <div class="logo">
-                    <a href="index.html">
-                        <img class="logo-light" src="img/sarrow.png" alt="" />
-                        <img class="logo-dark" src="img/lsarrow.png" alt="" />
+                    <a href="/">
+                        <img class="logo-light" src="img/sarrow.png" alt="arrow" />
+                        <img class="logo-dark" src="img/sarrow.png" alt="arrow" />
                     </a>
                 </div>
                 <!-- End Logo -->
@@ -82,15 +47,9 @@
                 <!-- Rightside Menu (Search, Cart, Bart icon) -->
                 <div class="side-menu-btn">
                     <ul>
-                        <!-- Search Icon -->
-                        <li class="">
-                            <a class="search-overlay-menu-btn header-icon"><i class="fa fa-search"></i></a>
-                        </li>
-                        <!-- End Search Icon -->
-
                         <!-- Cart Icon -->
                         <li class="cart">
-                            <a class="header-icon" href="shop-checkout.html">
+                            <a class="header-icon" href="/shop-checkout">
                                 <i class="fa fa-shopping-cart"></i>
                                 <div class="cart-notification-wrap"><span class="cart-notification">2</span></div>
                             </a>
@@ -123,18 +82,11 @@
                                 <p class="cart-sub-totle"><span class="pull-left">Cart Subtotal</span><span class="pull-right totle"><strong>$798.00</strong></span></p>
                                 <div class="clearfix"></div>
                                 <div class="cart-checkout-btn">
-                                    <a href="shop-checkout.html" class="btn btn-md btn-color-b form-full checkout">Checkout</a>
+                                    <a href="/shop-checkout" class="btn btn-md btn-color-b form-full checkout">Checkout</a>
                                 </div>
                             </div>
                             <!-- End Cart Dropdown -->
                         </li>
-                        <!-- End Cart Icon -->
-
-                        <!--Sidebar Menu Icon-->
-                        <li class="">
-                            <a id="menu-sidebar-list-icon" class="nav-bar-icon"><span></span></a>
-                        </li>
-                        <!-- End Sidebar Menu Icon-->
                     </ul>
                 </div>
                 <!-- End Rightside Menu -->
@@ -147,94 +99,44 @@
 
                 <!-- Navbar Navigation -->
                 <div class="nav-menu">
-                    <ul class="nav-menu-inner" >
+                    <ul class="nav-menu-inner">
                         <li>
-                            <a class="menu-has-sub" href="home.html" >Home <i class="fa fa-angle-down"></i></a>
+                            <a class="menu-has-sub" href="/">Home <i class="fa fa-angle-down"></i></a>
                             <!-- Dropdown -->
                             <ul class="sub-dropdown dropdown">
-                                <li>
-                                    <a class="menu-has-sub" href='#'>Multi Page <i class="fa fa-angle-right"></i></a>
-                                    <ul class="sub-dropdown">
-                                        <li><a href="home.html">Default</a></li>
-                                        <li><a href="shop-2col.html">Shop</a></li>
-                                        <li><a href="home-coming-soon.html">Comming Soon</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a class="menu-has-sub" href="#">One Page <i class="fa fa-angle-right"></i></a>
-                                    <ul class="sub-dropdown">
-                                        <li><a href="onepage.html">Default</a></li>
-                                        <li><a href="onepage-personal.html">Personal</a></li>
-                                        <li><a href="onepage-video.html">Video</a></li>
-                                        <li><a href="onepage-youtube.html">Youtube</a></li>
-                                        <li><a href="onepage-static.html">Static</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="/about">About</a></li>
                             </ul>
                             <!-- End Dropdown -->
                         </li>
-                        <!-- Pages -->
                         <li>
-                            <a class="menu-has-sub">Pages <i class="fa fa-angle-down"></i></a>
+                        <!-- Gear Links -->
+                            <a class="menu-has-sub">Gear Rentals <i class="fa fa-angle-down"></i></a>
                             <!-- Dropdown -->
                             <ul class="sub-dropdown dropdown">
                                 <li>
-                                    <a class="menu-has-sub">About Us <i class="fa fa-angle-right"></i></a>
-                                    <ul class="sub-dropdown">
-                                        <li><a href="about.html">About</a></li>
-                                    </ul>
+                                    <a href="/skis">Skis</a>
                                 </li>
                                 <li>
-                                    <a class="menu-has-sub">Service <i class="fa fa-angle-right"></i></a>
-                                    <ul class="sub-dropdown">
-                                        <li><a href="service-1.html">Service 1</a></li>
-                                    </ul>
+                                    <a href="/sups">Paddleboards</a>
                                 </li>
                                 <li>
-                                    <a class="menu-has-sub">Contact Us <i class="fa fa-angle-right"></i></a>
-                                    <ul class="sub-dropdown">
-                                        <li><a href="contact-1.html">Contact 1</a></li>
-                                        <li><a href="contact-2.html">Contact 2</a></li>
-                                        <li><a href="contact-3.html">Contact 3</a></li>
-                                    </ul>
-                                </li>
+                                    <a href="/bikes">Bikes</a>
+                                </li> 
                                 <li>
-                                    <a class="menu-has-sub">Faq<i class="fa fa-angle-right"></i></a>
-                                    <ul class="sub-dropdown">
-                                        <li><a href="faq-1.html">Faq 1</a></li>
-                                        <li><a href="faq-2.html">Faq 2</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a class="menu-has-sub">Login / Register<i class="fa fa-angle-right"></i></a>
-                                    <ul class="sub-dropdown">
-                                        <li><a href="login-register.html">Login / Register</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="pricing.html">Pricing</a></li>
+                                    <a href="/kayaks">Kayaks</a>
+                                </li>    
+                                 <li>
+                                    <a href="/kayaks">Camping</a>
+                                </li>                                          
                             </ul>
                             <!-- End Dropdown -->
                         </li>
-                    <!-- Shop -->
-                        <li>
-                            <a class="menu-has-sub">Shop <i class="fa fa-angle-down"></i></a>
-                            <!-- Dropdown -->
-                            <ul class="sub-dropdown dropdown">
-                                <li><a href="shop-4col.html">Products</a></li>
-                                <li><a href="shop-left-sidebar.html">Left Sidebar</a></li>
-                                <li><a href="shop-right-sidebar.html">Right Sidebar</a></li>
-                                <li><a href="shop-detail.html">Shop Detail</a></li>
-                                <li><a href="shop-checkout.html">Checkout</a></li>
-                            </ul>
-                            <!-- End Dropdown -->
-                      </li>
                     </ul>
                 </div>
                 <!-- End Navbar Navigation -->
             </div>
         </header>
         <!-- End Header -->
-
         <!-- CONTENT --------------------------------------------------------------------------------->
         <!-- Intro Section -->
         <section class="inner-intro" style="background-image: url(
@@ -327,7 +229,7 @@
                 <div class="row mb-60">
                     <!-- Logo -->
                     <div class="col-md-3 col-sm-3 mb-xs-30">
-                        <a class="footer-logo" href="home.html">
+                        <a class="footer-logo" href="/">
                             <img src="img/sarrow.png" /></a>
                     </div>
                     <!-- Logo -->
@@ -362,17 +264,17 @@
                     </div>
                     <div class="col-md-3 col-sm-6 mb-sm-30 mb-xs-0">
                         <ul class="link">
-                            <li><a href="login-register.html">Login & Signup</a></li>
-                            <li><a href="faq-1.html">FAQ</a></li>
-                            <li><a href="about-1.html">About</a></li>
-                            <li><a href="service-1.html">Service</a></li>
+                            <li><a href="/login-register">Login & Signup</a></li>
+                            <li><a href="/faq">FAQ</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/service">Service</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 col-sm-6 mb-sm-30">
                         <ul class="link">
-                            <li><a href="contact-1.html">Contact Us</a></li>
-                            <li><a href="shop-checkout.html">Shopping Cart</a></li>
-                            <li><a href="home.html">Home</a></li>
+                            <li><a href="/contact">Contact Us</a></li>
+                            <li><a href="/shop-checkout">Shopping Cart</a></li>
+                            <li><a href="/">Home</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 col-sm-12">
