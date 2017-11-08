@@ -1,6 +1,5 @@
 var Sequelize = require('sequelize');
 
-// TODO: Need to add support for multiple configs (dev/prod) and heroku
 var configs = {
   "sherpa": {
     "username": "root",
@@ -11,8 +10,12 @@ var configs = {
   }
 };
 
-var sherpaDB = new Sequelize(configs['sherpa'].database,
-  configs['sherpa'].username, configs['sherpa'].password, configs['sherpa']);
+if (process.env.JAWSDB_URL) {
+  var sherpaDB = new Sequelize(process.env.JAWSDB_URL);
+} else {
+  var sherpaDB = new Sequelize(configs['sherpa'].database,
+    configs['sherpa'].username, configs['sherpa'].password, configs['sherpa']);
+}
 
 var equipment = sherpaDB.define('equipment', {
   equipment_brand: Sequelize.STRING(100),
@@ -103,3 +106,5 @@ var db = {
 	systemUsers: systemUsers
 };
 module.exports = db;
+
+
