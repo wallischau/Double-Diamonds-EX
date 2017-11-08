@@ -18,6 +18,7 @@ var equipment = sherpaDB.define('equipment', {
   equipment_brand: Sequelize.STRING(100),
   equipment_name: Sequelize.STRING(100),
   description: Sequelize.STRING(100),
+  equipment_type: Sequelize.STRING(50),
   sku: Sequelize.STRING(6),
   pic: Sequelize.STRING(255),
   price: Sequelize.DECIMAL(10,2),
