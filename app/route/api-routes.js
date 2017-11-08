@@ -22,6 +22,20 @@ module.exports = function(app){
     });
   });
 
+	app.post("/api/newCustomer", function(req, res){
+		console.log("customer Data");
+		console.log(req.body);
+		//system users
+		console.log(db.systemUsers)
+		db.systemUsers.create({
+			first_name: req.body.name,
+			last_name: req.body.name,
+			email: req.body.email,
+			type: req.body.payment
+		});
+		
+	});
+
 	 // app.get("/api/equipment/:id", function(req, res) {
   //    // Find one Author with the id in req.params.id and return them to the user with res.json
   //  db.equipment.findOne({

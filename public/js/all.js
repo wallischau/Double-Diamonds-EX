@@ -4,12 +4,12 @@ var equipmentArray;
 
 
 $.get("/api/all", function(data){
-	console.log(data, " the data should be here");
+    console.log(data, " the data should be here");
   //store data into array
   equipmentArray = data.slice();
-	for(var i=0; i< 8; i++){
+    for(var i=0; i< 8; i++){
      var newPanel = $(`
-     	 <div class="nf-item col-md-3 col-sm-6 mb-30">
+         <div class="nf-item col-md-3 col-sm-6 mb-30">
                         <div class="item-box">
                             <!-- Shop item images -->
                             <div class="shop-item">
@@ -37,12 +37,12 @@ $.get("/api/all", function(data){
                             <!-- Shop item info -->
                         </div>
                     </div>
-     		
-     	`);
+            
+        `);
 
-		$('#well-section').append(newPanel);
+        $('#well-section').append(newPanel);
 
-	}
+    }
 }); //.get(api/all)
 
 // /* this section does not add item to the page? */
@@ -93,10 +93,10 @@ $.get("/api/all", function(data){
 // });
 
 // $.get("/api/all", function(data){
-// 	console.log(data,  " the data should be here");
-// 	for(var i=0; i<1; i++){
+//  console.log(data,  " the data should be here");
+//  for(var i=0; i<1; i++){
 //      var newPanelOne = $(`
-//      	 <div class="row ">
+//           <div class="row ">
 //                     <!-- Shop Item -->
 //                     <div class="col-md-6 mb-sm-60">
 
@@ -154,12 +154,12 @@ $.get("/api/all", function(data){
 //                     <!-- End Shop info -->
 //                       </div>
 //                     </div>
-     		
-//      	`);
+            
+//          `);
 
-// 		$('#well-section-shop').append(newPanelOne);
+//      $('#well-section-shop').append(newPanelOne);
 
-// 	}
+//  }
 // });
 
 
