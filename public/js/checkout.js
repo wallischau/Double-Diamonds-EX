@@ -63,7 +63,7 @@ $.get("/api/" + id, function(data){
 }); //get /api
 
 function updateTotalCost() {
-     subtotal += cost;
+     subtotal = cost;
      var tax = subtotal * TAXRATE;
      var total = subtotal + tax;
 
