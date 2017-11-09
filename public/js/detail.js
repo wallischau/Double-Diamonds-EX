@@ -38,7 +38,7 @@ $.get("/api/" + id, function(data){
                     <div class="col-md-6">
                         <div class="shop-detail-info">
                             <h4>${data.equipment_name}</h4>
-                            <div class="shop-item-price mtb-15 ptb-15"><span>${data.price}</span></div>
+                            <div class="shop-item-price mtb-15 ptb-15"><span>$${data.price}/day</span></div>
                             <hr />
                             <p class="ptb-15">${data.description}</p>
                             <ul class="project-detail-block ptb-15">
