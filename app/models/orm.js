@@ -14,7 +14,7 @@ if (process.env.JAWSDB_URL) {
   var sherpaDB = new Sequelize(process.env.JAWSDB_URL);
 } else {
   var sherpaDB = new Sequelize(configs['sherpa'].database,
-    configs['sherpa'].username, configs['sherpa'].password, configs['sherpa']);
+  configs['sherpa'].username, configs['sherpa'].password, configs['sherpa']);
 }
 
 var equipment = sherpaDB.define('equipment', {
