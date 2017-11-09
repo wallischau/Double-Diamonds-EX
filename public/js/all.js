@@ -31,7 +31,7 @@ $.get("/api/all", function(data){
                                 <input type="hidden" name="item_id" value=${data[i].id}>
                                 <input class="item-detail" type="submit" name="item_box" value=${data[i].equipment_name}>
                               </form>
-                                <div class="shop-item-price"><span>${data[i].price}</span></div>
+                                <div class="shop-item-price"><span>$${data[i].price}/day</span></div>
                                 <p>${data[i].description}</p>
                             </div>
                             <!-- Shop item info -->
