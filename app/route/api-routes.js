@@ -28,10 +28,12 @@ module.exports = function(app){
 		//system users
 		console.log(db.systemUsers)
 		db.systemUsers.create({
-			first_name: req.body.name,
-			last_name: req.body.name,
 			email: req.body.email,
-			type: req.body.payment
+			first_name: req.body.first_name,
+			last_name: req.body.last_name,
+			phone: req.body.phone
+		}).catch(function(err) {
+			console.log("something");
 		});
 		
 	});
