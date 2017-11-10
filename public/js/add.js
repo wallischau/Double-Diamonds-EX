@@ -18,17 +18,22 @@ $(document).ready(function(){
     console.log(parameters);
  }
 
+// sessionStorage.setItem("loadcount", 1);
+
+
 // The code in add.js handles what happens when the user clicks the "Add a book" button.
 // When user clicks add-btn
 $("#form-submit").on("click", function(event) {
   event.preventDefault();
   
+  //split name into first and last name
+  var nameArray = $("#signup-username").val().trim().split(" ");
   // Make a newBook object
   var newCustomer = {
     email: $("#signup-email").val().trim(),
-    name: $("#signup-username").val().trim(),
-    phone: $("#signup-phone").val().trim(),
-    payment: $("#paymentMethod").val().trim()
+    last_name: nameArray[1],
+    first_name: nameArray[0],
+    phone: $("#signup-phone").val().trim()
 
   };
   console.log(newCustomer);
@@ -44,11 +49,19 @@ $("#form-submit").on("click", function(event) {
   newDiv.html(`Item: ${equipment_name} <br> Quantity: ${quantity} <br>
                Duration: ${duration} day(s) <br> Cost: $${cost}`);
   $(".modal-body").append(newDiv);
-
+  $('#myModal').modal("show");
   // Empty each input box by replacing the value with an empty string
   $("#signup-email").val("");
   $("#signup-username").val("");
   $("#signup-phone").val("");
   $("#payment").val("");
+
+  return false;
 });
+
+$('#myModal').on('shown.bs.modal', function (e) {
+  e.preventDefault();
+  console.log("modal shown");
+});
+
 });//ready
