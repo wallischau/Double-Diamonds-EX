@@ -60,6 +60,25 @@ $.get("/api/" + id, function(data){
     $('#well-section-table').append(newPanelTwo);
     //update cart total
     updateTotalCost();
+
+    //format string
+    var equipment_name = data.equipment_name.replace(/ /g,'+');
+    console.log(equipment_name);
+    var checkoutButton = $(`
+            <form action="confirmation.html", method="GET"> 
+              <input type="hidden" name="item_id" value=${data.id}>
+              <input type="hidden" name="item-name" value=${equipment_name}>
+              <input type="hidden" name="item_quantity" value=${quantity}>
+              <input type="hidden" name="item_duration" value=${duration}>
+              <input type="hidden" name="item_cost" value=${cost}>
+              <div class="btn btn-lg btn-color-b form-full"> 
+                <input type="submit" class= "btn btn-color-b" name="item_box" value="Proceed to Checkout" style="background-color: Transparent; border: none; margin: 0px;">
+                <i class="fa fa-chevron-right right"></i>
+              </div>
+            </form>
+        `);
+    $('#checkout-button').append(checkoutButton);
+
 }); //get /api
 
 function updateTotalCost() {
