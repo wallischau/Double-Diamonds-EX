@@ -49,6 +49,9 @@ $("#form-submit").on("click", function(event) {
   newDiv.html(`Item: ${equipment_name} <br> Quantity: ${quantity} <br>
                Duration: ${duration} day(s) <br> Cost: $${cost}`);
   $(".modal-body").append(newDiv);
+  var randomNumber1 = Math.floor((Math.random() * 10000) + 1);
+  var randomNumber2 = Math.floor((Math.random() * 10000) + 1);
+  $(".modal-title").html(`Confirmation #${randomNumber1}-${randomNumber2}`);
   $('#myModal').modal("show");
   // Empty each input box by replacing the value with an empty string
   $("#signup-email").val("");
