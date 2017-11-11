@@ -19,7 +19,7 @@ $.get("/api/all", function(data){
                                 <div class="item-mask">
                                     <div class="item-mask-detail">
                                         <div class="item-mask-detail-ele">
-                                            <a id="rent-me" class="btn btn-line-xs btn-white-line" ><i class="fa fa-shopping-cart"></i>Rent Me</a>
+                                            <a id="rent-me" class="btn btn-line-xs btn-white-line"><i class="fa fa-shopping-cart"></i>Rent Me</a>
                                         </div>
                                     </div>
                                 </div>
