@@ -1,3 +1,10 @@
+/*****************************************************************/
+/* add.js                                                        */
+/* Description: js file for confirmation.html                    */
+/* Date: 10/28/2017                                              */
+/* Author: Wallis Chau, Megan Landahl, Ed Quintana, Kelly Wenzel */
+/*****************************************************************/
+
 $(document).ready(function(){
 
 /* Code for extracting the input parameters from the url */
@@ -18,10 +25,8 @@ $(document).ready(function(){
     console.log(parameters);
  }
 
-// sessionStorage.setItem("loadcount", 1);
 
-
-// The code in add.js handles what happens when the user clicks the "Add a book" button.
+// The code in add.js handles what happens when the user clicks the "reservation" button.
 // When user clicks add-btn
 $("#form-submit").on("click", function(event) {
   event.preventDefault();
@@ -49,6 +54,10 @@ $("#form-submit").on("click", function(event) {
   newDiv.html(`Item: ${equipment_name} <br> Quantity: ${quantity} <br>
                Duration: ${duration} day(s) <br> Cost: $${cost}`);
   $(".modal-body").append(newDiv);
+  var randomNumber1 = Math.floor((Math.random() * 10000) + 1);
+  var randomNumber2 = Math.floor((Math.random() * 10000) + 1);
+  $(".modal-title").html(`Confirmation #${randomNumber1}-${randomNumber2}`);
+  
   $('#myModal').modal("show");
   // Empty each input box by replacing the value with an empty string
   $("#signup-email").val("");

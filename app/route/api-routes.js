@@ -1,8 +1,15 @@
+/*****************************************************************/
+/* api-route.js                                                  */
+/* Description: api route definition                             */
+/* Date: 10/28/2017                                              */
+/* Author: Wallis Chau, Megan Landahl, Ed Quintana, Kelly Wenzel */
+/*****************************************************************/
+
 var db = require("../models/orm.js");
 
 module.exports = function(app){ 
 
-	//get all the equipment information ever
+	//get all the equipment information 
 	app.get("/api/all", function(req, res){
 		db.equipment.findAll({}).then(function(results){
 			res.json(results);
@@ -22,6 +29,7 @@ module.exports = function(app){
     });
   });
 
+	//post customer info into systemUsers table
 	app.post("/api/newCustomer", function(req, res){
 		console.log("customer Data");
 		console.log(req.body);
@@ -37,42 +45,4 @@ module.exports = function(app){
 		});
 		
 	});
-
-	 // app.get("/api/equipment/:id", function(req, res) {
-  //    // Find one Author with the id in req.params.id and return them to the user with res.json
-  //  db.equipment.findOne({
-  //  	where: {
-  //  		id: req.params.id
-  //  	},
-  //  	include: [db.season_name]
-  //  }).then(function(dbPost){
-  //  		res.json(dbPost);
-  //  })
-  //  });
-	// app.get("/api/:season_name", function(req, res){
-	// 	Equipment.findAll({
-
-	// 		where: {
-	// 			season_name: req.params.season_name
-	// 		}
-	// 	}).then(function(results){
-	// 		res.json(results);
-	// 	});
-	// });
-	// app.get("/api/:equipment_name", function(req, res){
-	// 	Equipment.findAll({
-
-	// 		where: {
-	// 			equipment_name: req.params.equipment_name
-	// 		}
-	// 	}).then(function(results){
-	// 		res.json(results);
-	// 	});
-	// });
-	// app.post("/api/:epuipment_name", function(req, res){
-	// 	db
-	// })
-
-
-
-}
+}//export modules
