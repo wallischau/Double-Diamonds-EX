@@ -1,3 +1,10 @@
+/*****************************************************************/
+/* checkout.js                                                   */
+/* Description: js file for shop-checkout.html                   */
+/* Date: 10/28/2017                                              */
+/* Author: Wallis Chau, Megan Landahl, Ed Quintana, Kelly Wenzel */
+/*****************************************************************/
+
 $(document).ready(function(){
 /* Code for extracting the input parameters from the url */
 var parameters = window.location.search.substring(1).split("&");
@@ -20,44 +27,41 @@ var price = 0;
 var subtotal = 0;
 const TAXRATE = 0.05;
 
+//get data by id
 $.get("/api/" + id, function(data){
  console.log(data, "the data should be here");
  price = data.price;
  cost = quantity * duration * price;	
      var newPanelTwo = $(`
-        
-                                <td class="hidden-xs">
-                                    <a href="">
-                                        <img src="img/fishw.jpg" />
-                                    </a>
-                                </td>
-                                <td>
-                                    <h6><a href="#">${data.equipment_name}</a></h6>
-                                    <p class="mt-0">
-                                        <small>SKU : #${data.sku}</small>
-                                        <small>Color : Purple Grid Topsheet</small>
-                                        <small>Size : See description</small>
-                                    </p>
-                                </td>
-                                <td class="hidden-xs">${data.price}</td>
-                                <td>
-                                    <form>
-                                        <input id="item-quantity" type="number" value="${quantity}" max="50" min="1" style="width: 100%; max-width: 70px;" class="input-md">
-                                    </form>
-                                </td>
-                                <td>
-                                    <form>
-                                        <input id="item-duration" type="number" value="${duration}" max="50" min="1" style="width: 100%; max-width: 70px;" class="input-md">
-                                    </form>
-                                </td>
-
-                                <td id="cost">$${cost}</td>
-                                <td><a><i class="fa fa-times-circle"></i></a></td>
-                           
-         
+         <td class="hidden-xs">
+             <a href="">
+                 <img src="img/fishw.jpg" />
+             </a>
+         </td>
+         <td>
+             <h6><a href="#">${data.equipment_name}</a></h6>
+             <p class="mt-0">
+                 <small>SKU : #${data.sku}</small>
+                 <small>Color : Purple Grid Topsheet</small>
+                 <small>Size : See description</small>
+             </p>
+         </td>
+         <td class="hidden-xs">${data.price}</td>
+         <td>
+             <form>
+                 <input id="item-quantity" type="number" value="${quantity}" max="50" min="1" style="width: 100%; max-width: 70px;" class="input-md">
+             </form>
+         </td>
+         <td>
+             <form>
+                 <input id="item-duration" type="number" value="${duration}" max="50" min="1" style="width: 100%; max-width: 70px;" class="input-md">
+             </form>
+         </td>
+         <td id="cost">$${cost}</td>
+         <td><a><i class="fa fa-times-circle"></i></a></td>
          `);
-
     $('#well-section-table').append(newPanelTwo);
+
     //update cart total
     updateTotalCost();
 
@@ -81,6 +85,7 @@ $.get("/api/" + id, function(data){
 
 }); //get /api
 
+/* update total cost based on cost */
 function updateTotalCost() {
      subtotal = cost;
      var tax = subtotal * TAXRATE;
@@ -96,7 +101,7 @@ function updateTotalCost() {
 
 }
 
-
+/* cart update event listener */
 $(document).on("click", "#cart-update", function() {
     quantity = $("#item-quantity").val();
     console.log(quantity);
